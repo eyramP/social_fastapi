@@ -23,6 +23,7 @@ class User(BaseModel):
     last_name: str
     email: EmailStr
     password: str
+    phone_number: str
     created_at: datetime
 
     def to_dict(self):
@@ -31,6 +32,7 @@ class User(BaseModel):
             "first_name": self.first_name,
             "last_name": self.last_name,
             "email": self.email,
+            "phone_number": self.phone_number,
             "created_at": self.created_at,
         }
 
@@ -40,6 +42,7 @@ class CreateUser(BaseModel):
     last_name: str
     email: EmailStr
     password: str
+    phone_number: str
 
     class Config:
         arbitrary_types_allowed = True
@@ -50,6 +53,7 @@ class ReturnUser(BaseModel):
     first_name: str
     last_name: str
     email: EmailStr
+    phone_number: str
     created_at: datetime
 
     def to_dict(self):
@@ -58,6 +62,7 @@ class ReturnUser(BaseModel):
             "first_name": self.first_name,
             "last_name": self.last_name,
             "email": self.email,
+            "phone_number": self.phone_number,
             "created_at": self.created_at,
         }
 
