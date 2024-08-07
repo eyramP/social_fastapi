@@ -26,6 +26,8 @@ class Users(Base):
             "first_name": self.first_name,
             "last_name": self.last_name,
             "email": self.email,
+            "password": self.password,
+            "phone_number": self.phone_number,
             "created_at": self.created_at,
         }
 
